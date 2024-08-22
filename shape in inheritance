@@ -1,0 +1,59 @@
+// Abstract base class Shape
+class Shape {
+public:
+    // Pure virtual functions
+    virtual double calculate_area() const = 0;
+    virtual void display_shape() const = 0;
+};
+
+// Derived class Rectangle from Shape
+class Rectangle : public Shape {
+private:
+    double length;
+    double width;
+public:
+    Rectangle(double l, double w) : length(l), width(w) {}
+
+    // Implementing calculate_area for Rectangle
+    double calculate_area() const override {
+        return length * width;
+    }
+
+    // Implementing display_shape for Rectangle
+    void display_shape() const override {
+        cout << "This is a Rectangle" << endl;
+    }
+};
+
+// Derived class Circle from Shape
+class Circle : public Shape {
+private:
+    double radius;
+public:
+    Circle(double r) : radius(r) {}
+
+    // Implementing calculate_area for Circle
+    double calculate_area() const override {
+        return M_PI * radius * radius;
+    }
+
+    // Implementing display_shape for Circle
+    void display_shape() const override {
+        cout << "This is a Circle" << endl;
+    }
+};
+
+int main() {
+    // Create objects of Rectangle and Circle
+    Rectangle rectangle(5.0, 4.0);
+    Circle circle(3.0);
+
+    // Display shapes and their areas
+    rectangle.display_shape();
+    cout << "Area of Rectangle: " << rectangle.calculate_area() << endl;
+
+    circle.display_shape();
+    cout << "Area of Circle: " << circle.calculate_area() << endl;
+
+    return 0;
+}

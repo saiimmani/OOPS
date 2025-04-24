@@ -37,7 +37,7 @@ Abstraction provides an interface without exposing implementation details.
 - Example 1: Abstract Class with Pure Virtual Function
 - Example 2: Interface Implementation
 
-### 5️⃣ Encapsulation & Inheritance Combined
+### Encapsulation & Inheritance Combined
 A program demonstrating both encapsulation and inheritance.
 
 ---
